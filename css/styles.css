@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+section{
+    flex-grow: 1;
+    display: none; 
+}
+
+#home{
+    display: block;
+}
+
+header{
+    background-color: #FFC4DA;
+    font-size: 38px;
+    padding: 10px; 
+    text-align: center; 
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF88B4; 
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh; 
+    width: 285px;
+    background-color: #FFE6F0;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    padding: 10px; 
+    text-align: center;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: #FF88B4;
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}

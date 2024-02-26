@@ -1,18 +1,16 @@
 class Books{
-  constructor(name, autor, genre, year, editorial, status){
-    this.name = name;
+  constructor(title, autor, genre){
+    this.title = title;
     this.autor = autor;
     this.genre = genre;
-    this.year = year;
-    this.editorial = editorial;
-    this._status = "to read"; 
+    this.status = "to read"; 
   }
 
-  get getName(){
-    return this.name; 
+  get getTitle(){
+    return this.title; 
   }
-  set setName(name){
-    this.name = name
+  set setTitle(title){
+    this.titgle = title; 
   }
 
   get getAutor(){
@@ -29,25 +27,11 @@ class Books{
     this.genre = genre;
   }
 
-  get getYear()
-  {
-    return this.year; 
-  }
-  set setYear(year){
-    this.year = year;
-  }
-
-  get getEditorial(){
-    return this.editorial; 
-  }
-  set setEditorial(editorial){  
-    this.editorial = editorial;
-  }
-
   get getStatus(){
     return this.status; 
   }
   set setStatus(status){
+    this.status = status;
   }
 
 }
