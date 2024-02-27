@@ -22,9 +22,13 @@
     <main>
       <nav id="#side-navbar">
         <ul>
+          <hr>          
           <li onclick="hideSection('home')"><a href="#home">Home</a></li>
+          <hr>
           <li onclick="hideSection('all-books')"><a href="#all-books">All books</a></li>
+          <hr>
           <li onclick="hideSection('gestionate-books')"><a href="#gestionate-books">Gestionate your books</a></li>
+          <hr>
         </ul>
       </nav>
 
@@ -57,7 +61,7 @@
 
               <div class="structure-select">
                 <label for="genreBook"> Genre </label>
-                <select name="genre">
+                <select id="select-option-genre" name="genre">
                   <option value="value1" selected>Romance</option>
                   <option value="value2">Fantasy</option>
                   <option value="value3">Science Fiction</option>
@@ -68,7 +72,7 @@
 
               <div class="structure-select">
                 <label for="statusBook"> Status </label>
-                <select name="status">
+                <select id="select-option-status" name="status">
                   <option value="value1" selected>To read</option>
                   <option value="value2">reading</option>
                   <option value="value3">Read</option>
@@ -77,7 +81,8 @@
               </div>
               
               <button type="button" id="btnSave">Save</button>
-              <button type="button" id="btnCancel" onclick="showAddButton('add-action')">Cancel</button>                       
+              <button type="button" id="btnCancel" onclick="clearInputs()">Cancel</button>
+              <a class="form-visible" onclick="showAddButton('add-action')"><img src="./sources/crudElements/hideForm.png" alt="hide form"></a>
             </form>
           </div>     
         </section>

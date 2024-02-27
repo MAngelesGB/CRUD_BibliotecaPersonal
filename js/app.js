@@ -15,6 +15,16 @@ function showAddActionForm(id){
     document.getElementById('add-action-button').style.display = 'none';
 }
 
+//function clear inputs
+function clearInputs(){
+    //Selet all inputs and clear them with a forEach loop using querySelectorAll that returns a NodeList.
+    document.querySelectorAll('input').forEach(function(input){
+        input.value = '';
+    });
+    document.getElementById('select-option-genre').selectedIndex = 0;
+    document.getElementById('select-option-status').selectedIndex = 0;
+}
+
 //function to show add button
 function showAddButton(id){
     document.getElementById(id).style.display = 'none';
