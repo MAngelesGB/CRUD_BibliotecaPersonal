@@ -11,57 +11,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
       
     <header>
-        <h1>My Personal library</h1>
+      <h1>My Personal library</h1>
     </header>
 
     <main>
-        <nav id="#side-navbar">
-            <ul>
-              <li onclick="hideSection('home')"><a href="#home">Home</a></li>
-              <li onclick="hideSection('all-books')"><a href="#all-books">All books</a></li>
-              <li onclick="hideSection('gestionate-books')"><a href="#gestionate-books">Gestionate your books</a></li>
-            </ul>
-          </nav>
+      <nav id="#side-navbar">
+        <ul>
+          <li onclick="hideSection('home')"><a href="#home">Home</a></li>
+          <li onclick="hideSection('all-books')"><a href="#all-books">All books</a></li>
+          <li onclick="hideSection('gestionate-books')"><a href="#gestionate-books">Gestionate your books</a></li>
+        </ul>
+      </nav>
 
         <section id = "home">
-            <p>Esto es el home</p>
+          <p>Esto es el home</p>
         </section>
     
         <section id = "all-books">
-            <p>Aqui estan todos los libros</p>
+          <p>Aqui estan todos los libros</p>
         </section> 
     
         <section id = "gestionate-books">
+          <h2>Gestionate your books</h2>
+
+          <div id="add-action-button" class="show-add">
+            <button type="button" onclick="showAddActionForm('add-action')">Add</button>
+          </div>
+
+          <div id="add-action" class = "info-book">
             <form>
-                <label for="titleBook">
-                    <input type="text" name="title" id="txtTitle" placeholder="Title of the book">
-                </label>
-                <label for="authorBook">
-                    <input type="text" name="author" id="txtAuthor" placeholder="Author of the book">
-                </label>
-                <label for="genreBook">
-                    <select name="genre">
-                        <option value="value1" selected>Romance</option>
-                        <option value="value2">Fantasy</option>
-                        <option value="value3">Science Fiction</option>
-                        <option value="value4">Mystery</option>
-                        <option value="value5">Suspense</option>
-                    </select>
-                </label>
-                <label for="statusBook">
-                    <select name="genre">
-                        <option value="value1" selected>To read</option>
-                        <option value="value2">reading</option>
-                        <option value="value3">Read</option>
-                        <option value="value4">Abandoned</option>
-                    </select>
-                </label>
-                <button type="button" id="btnSave">Save books</button>                      
-            </form> 
+              <div class="structure-input">
+                <label for="titleBook"> Title </label>
+                <input type="text" name="title" id="txtTitle" placeholder="Title of the book">
+              </div>
+
+              <div class="structure-input">
+                <label for="authorBook"> Author </label>
+                <input type="text" name="author" id="txtAuthor" placeholder="Author of the book">
+              </div>
+
+              <div class="structure-select">
+                <label for="genreBook"> Genre </label>
+                <select name="genre">
+                  <option value="value1" selected>Romance</option>
+                  <option value="value2">Fantasy</option>
+                  <option value="value3">Science Fiction</option>
+                  <option value="value4">Mystery</option>
+                  <option value="value5">Suspense</option>
+                </select>
+              </div>
+
+              <div class="structure-select">
+                <label for="statusBook"> Status </label>
+                <select name="status">
+                  <option value="value1" selected>To read</option>
+                  <option value="value2">reading</option>
+                  <option value="value3">Read</option>
+                  <option value="value4">Abandoned</option>
+                </select>
+              </div>
+              
+              <button type="button" id="btnSave">Save</button>
+              <button type="button" id="btnCancel" onclick="showAddButton('add-action')">Cancel</button>                       
+            </form>
+          </div>     
         </section>
     </main>
     

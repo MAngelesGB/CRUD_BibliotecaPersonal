@@ -24,7 +24,7 @@ section{
 
 header{
     background-color: #FFC4DA;
-    font-size: 38px;
+    font-size: 35px;
     padding: 10px; 
     text-align: center; 
     font-family: "Homemade Apple", cursive;
@@ -33,12 +33,23 @@ header{
     color: #FF88B4; 
 }
 
+h2{
+    margin-top: 18px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: #FF88B4;
+    text-align: center;
+
+}
+
 nav{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 75vh; 
-    width: 285px;
+    height: 80vh; 
+    width: 235px;
     background-color: #FFE6F0;
 }
 
@@ -57,12 +68,112 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #FF88B4;
-    font-size: 20px;
+    font-size: 22px;
     display: inline-block;
     width: 100%;
     text-align: center;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 22px;
+}
+
+/* -------------------- gestionate books --------------------*/
+/* ######## Add button ###### */
+
+.show-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.show-add button{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #B8E780;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ######## Form ###### */
+
+.info-book{
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    background-color: #FFE6F0;
+    width: 800px;
+    margin: 25px auto;
+    border-radius: 15px;
+}
+
+.info-book form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-book form .structure-input input:focus{
+    outline: none;
+    border: 2px solid #FF88B4;
+}
+
+.info-book form .structure-select select:focus{
+    outline: none;
+    border: 2px solid #FF88B4;
+}
+
+.info-book form .structure-input input[type="text"]{
+    width: 350px;
+    height: 18px;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0px 10px;
+    margin-bottom: 15px;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.info-book form .structure-input, .structure-select{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-book form .structure-select label, .structure-input label{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #FF88B4;
+    margin: 0px 10px;
+}
+
+.info-book form .structure-select select{
+    width: 200px;
+    height: 28px;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0px 10px;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.info-book form button{
+    width: 96px;
+    height: 25px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 26px;
+    background-color: #B8E780;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
