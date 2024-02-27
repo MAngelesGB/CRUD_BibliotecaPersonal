@@ -43,6 +43,18 @@ h2{
     text-align: center;
 }
 
+/* added a h3 for the slogan and the name --- Cecilia */
+
+h3{
+    margin-top: 6px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #FF88B4;
+    text-align: center;
+  }  
+
 nav{
     display: flex;
     align-items: center;
@@ -91,6 +103,32 @@ nav ul li a{
     font-weight: 400;
     font-style: normal;
     
+}
+
+/* -------------------- home --------------------*/
+
+/* added home-section class for the centered div --- Cecilia */
+
+.home-section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 100%;
+    width: 90%;
+}
+
+/* added home-logo class for the centered image --- Cecilia */
+
+.home-section .home-logo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 51%;
+    border-radius: 15px;
+    object-fit: contain;
 }
 
 /* -------------------- gestionate books --------------------*/
@@ -204,4 +242,21 @@ nav ul li a{
     margin-top: 20px;
     margin-left: 15px;
     cursor: pointer;
+}
+
+/* added footer style ---Cecilia */
+/* there's a problem with it */
+
+footer{
+    display: flex;
+    background-color: #FFC4DA;
+    font-size: 20px;
+    padding: 10px; 
+    text-align: center; 
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF88B4; 
+    position: absolute;
+    bottom: 0;
 }
