@@ -7,10 +7,6 @@ class Library{
     this.books.push(book);
   }
 
-  searchBook(title){
-
-  }
-
   removeBook(id){
     this.books = this.books.filter(book => book.id !== id);
   }

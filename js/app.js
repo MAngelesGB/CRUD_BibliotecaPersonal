@@ -9,9 +9,22 @@ btnSave.addEventListener("click",()=>{
     let genre = document.getElementById("select-option-genre").value;
     let status = document.getElementById("select-option-status").value;
     let book = new Books(title, author, genre, status);
-    library.addBook(book);
-    addBookTable(book);
-    clearInputs();
+    if(validation(book) == true){
+        library.addBook(book);
+        addBookTable(book);
+        clearInputs();
+    }
+    else
+        alert("Empty fields or invalid characters. Please try again.");
+        
+});
+
+const btnAllBooks = document.getElementById("active-books");
+btnAllBooks.addEventListener("click",()=>{
+    listBooks.innerHTML = "";
+    library.books.forEach(book => {
+        allBooks(book);
+    });
 });
 
 function addBookTable(book){
@@ -28,15 +41,14 @@ function addBookTable(book){
     `
 }
 
-function allBooks(){
+function allBooks(book){
     listBooks.innerHTML +=
     `
         <tr>
-            <td>${library.books.getId}</td>
-            <td>${library.books.getTitle}</td>
-            <td>${library.books.getAuthor}</td>
-            <td>${library.books.getGenre}</td>
-            <td>${library.books.getStatus}</td>
+            <td>${book.getTitle}</td>
+            <td>${book.getAuthor}</td>
+            <td>${book.getGenre}</td>
+            <td>${book.getStatus}</td>
         </tr>
     `
 }
@@ -55,8 +67,6 @@ function deleteBook(id){
 }
 
 function updateData(id){
-    document.getElementById('add-action').style.display = "block";
-    document.getElementById('add-action-button').style.display = "none";
     let book = library.books.find(book => book.getId === id);
     document.getElementById("txtId").value = book.getId;
     document.getElementById("txtTitle").value = book.getTitle;
@@ -67,6 +77,7 @@ function updateData(id){
     document.getElementById("btnUpdate").style.display = "block";
 }
 
+
 function updateBook(){
     let modified = confirm("Do you want to update this book?");
     if (modified){
@@ -75,14 +86,24 @@ function updateBook(){
         let author = document.getElementById("txtAuthor").value;
         let genre = document.getElementById("select-option-genre").value;
         let status = document.getElementById("select-option-status").value;
-        library.updateBook(parseInt(id,10), title, author, genre, status);
-        tableBooks.innerHTML = "";
-        library.books.forEach(book => {
-            addBookTable(book);
-        });
-        document.getElementById("btnSave").style.display = "block";
-        document.getElementById("btnUpdate").style.display = "none";
-        clearInputs();
+        
+        if(validationUpdate(title, author) == true)
+        {
+            library.updateBook(parseInt(id,10), title, author, genre, status);
+            tableBooks.innerHTML = "";
+            library.books.forEach(book => {
+                addBookTable(book);
+            });
+
+            document.getElementById("btnSave").style.display = "block";
+            document.getElementById("btnUpdate").style.display = "none";
+            clearInputs();
+        }
+        else
+            alert("Empty fields or invalid characters. Please try again.");
+    
+        
+        
     }
     
 }

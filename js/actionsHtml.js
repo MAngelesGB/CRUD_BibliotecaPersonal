@@ -23,6 +23,11 @@ function showAddActionForm(id){
     document.getElementById('add-action-button').style.display = 'none';
 }
 
+/*function hideAddActionForm(id){
+    document.getElementById(id).style.display = '';
+    document.getElementById('add-action-button').style.display = 'flex';
+}*/
+
 //function clear inputs
 function clearInputs(){
     //Selet all inputs and clear them with a forEach loop using querySelectorAll that returns a NodeList.
