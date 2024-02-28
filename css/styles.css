@@ -59,7 +59,7 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 80vh; 
+    height: 86vh; 
     width: 275px;
     background-color: #FFE6F0;
 }
@@ -251,7 +251,7 @@ footer{
     display: flex;
     background-color: #FFC4DA;
     font-size: 20px;
-    padding: 10px; 
+    padding: 10px 0px 10px 0px; /* delete padding to sides --- Cecilia*/
     text-align: center; 
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -259,4 +259,5 @@ footer{
     color: #FF88B4; 
     position: absolute;
     bottom: 0;
+    width: 100%; /* added width --- Cecilia*/
 }
