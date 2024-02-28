@@ -124,8 +124,7 @@ nav ul li a{
 
 .home-section .home-logo {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     height: 51%;
     border-radius: 15px;
     object-fit: contain;
