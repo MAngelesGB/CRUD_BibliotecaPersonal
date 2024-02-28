@@ -1,9 +1,15 @@
 class Books{
-  constructor(title, autor, genre){
+  static id = 0; 
+  constructor(title, author, genre,status){
+    this.id = ++Books.id; 
     this.title = title;
-    this.autor = autor;
+    this.author = author;
     this.genre = genre;
-    this.status = "to read"; 
+    this.status = status; 
+  }
+
+  get getId(){
+    return this.id; 
   }
 
   get getTitle(){
@@ -13,11 +19,11 @@ class Books{
     this.titgle = title; 
   }
 
-  get getAutor(){
-    return this.autor; 
+  get getAuthor(){
+    return this.author; 
   }
-  set setAutor(autor){  
-    this.autor = autor;
+  set setAuthor(author){  
+    this.author = author;
   }
   
   get getGenre(){

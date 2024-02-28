@@ -23,82 +23,107 @@
       <nav id="#side-navbar">
         <ul>
           <hr>          
-          <li onclick="hideSection('home')"><a href="#home">Home</a></li>
+          <li id = "active-home" onclick="hideSection('home'); colorActiveSection('active-home')">
+            <a href="#home">Home</a>
+          </li>
           <hr>
-          <li onclick="hideSection('all-books')"><a href="#all-books">All books</a></li>
+          <li id = "active-books" onclick="hideSection('all-books'); colorActiveSection('active-books')">
+            <a href="#all-books">All books</a>
+          </li>
           <hr>
-          <li onclick="hideSection('gestionate-books')"><a href="#gestionate-books">Gestionate your books</a></li>
+          <li id = "active-gestionate" onclick="hideSection('gestionate-books'); colorActiveSection('active-gestionate')">
+            <a href="#gestionate-books">Gestionate your books</a>
+          </li>
           <hr>
         </ul>
       </nav>
 
-<!-- added the home section's content Status: finished --- Cecilia -->
-<!-- PD: I added the icon too --- Cecilia -->
+      <!-- added the home section's content Status: finished --- Cecilia -->
+      <!-- PD: I added the icon too --- Cecilia -->
 
-        <section id = "home">
-            <div class="home-section">
-                <img src="./sources/crudElements/icon.jpeg" alt="logo del home" class="home-logo">
-                <h3>Welcome to your personal library</h3>
-                <h3>Read better, read more...</h3> 
-            </div> 
-        </section>
+      <section id = "home">
+        <div class="home-section">
+          <img src="./sources/crudElements/icon.jpeg" alt="logo del home">
+          <h3>Welcome to your personal library</h3>
+          <h3>Read better, read more...</h3>
+        </div> 
+      </section>
     
-        <section id = "all-books">
-          <p>Aqui estan todos los libros</p>
-        </section> 
+      <section id = "all-books">
+        <p>Aqui estan todos los libros</p>
+      </section> 
     
-        <section id = "gestionate-books">
-          <h2>Gestionate your books</h2>
+      <section id = "gestionate-books">
+        <h2>Gestionate your books</h2>
 
-          <div id="add-action-button" class="show-add">
-            <button type="button" onclick="showAddActionForm('add-action')">Add</button>
-          </div>
+        <div id="add-action-button" class="show-add">
+          <button type="button" onclick="showAddActionForm('add-action')">Add</button>
+        </div>
 
-          <div id="add-action" class = "info-book">
-            <form>
-              <div class="structure-input">
-                <label for="titleBook"> Title </label>
-                <input type="text" name="title" id="txtTitle" placeholder="Title of the book">
-              </div>
+        <div id="add-action" class = "info-book">
+          <form>
+            <div class="structure-input">
+              <label for="titleBook"> Title </label>
+              <input type="text" name="title" id="txtTitle" placeholder="Title of the book">
+            </div>
 
-              <div class="structure-input">
-                <label for="authorBook"> Author </label>
-                <input type="text" name="author" id="txtAuthor" placeholder="Author of the book">
-              </div>
+            <div class="structure-input">
+              <label for="authorBook"> Author </label>
+              <input type="text" name="author" id="txtAuthor" placeholder="Author of the book">
+            </div>
 
-              <div class="structure-select">
-                <label for="genreBook"> Genre </label>
-                <select id="select-option-genre" name="genre">
-                  <option value="value1" selected>Romance</option>
-                  <option value="value2">Fantasy</option>
-                  <option value="value3">Science Fiction</option>
-                  <option value="value4">Mystery</option>
-                  <option value="value5">Suspense</option>
-                </select>
-              </div>
+            <div class="structure-select">
+              <label for="genreBook"> Genre </label>
+              <select id="select-option-genre" name="genre">
+                <option value="Romance" selected>Romance</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Suspense">Suspense</option>
+              </select>
+            </div>
 
-              <div class="structure-select">
-                <label for="statusBook"> Status </label>
-                <select id="select-option-status" name="status">
-                  <option value="value1" selected>To read</option>
-                  <option value="value2">reading</option>
-                  <option value="value3">Read</option>
-                  <option value="value4">Abandoned</option>
-                </select>
-              </div>
-              
-              <button type="button" id="btnSave">Save</button>
-              <button type="button" id="btnCancel" onclick="clearInputs()">Cancel</button>
-              <a class="form-visible" onclick="showAddButton('add-action')"><img src="./sources/crudElements/hideForm.png" alt="hide form"></a>
-            </form>
-          </div>     
-        </section>
+            <div class="structure-select">
+              <label for="statusBook"> Status </label>
+              <select id="select-option-status" name="status">
+                <option value="To read" selected>To read</option>
+                <option value="Reading">Reading</option>
+                <option value="Read">Read</option>
+                <option value="Abandoned">Abandoned</option>
+              </select>
+            </div>
+            
+            <button type="button" id="btnSave">Save</button>
+            <button type="button" id="btnCancel" onclick="clearInputs()">Cancel</button>
+            <a class="form-visible" onclick="showAddButton('add-action')"><img src="./sources/crudElements/hideForm.png" alt="hide form"></a>
+          </form>
+        </div> 
+        
+        <div class="adding-books">
+          <table id="tableSong">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-books-body">
+
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
     
     <!-- began footer's section Status: not finished --- Cecilia -->
     <footer>
-      <p>this is a project created for class!</p>
+      <p>This is a project created for class!</p>
     </footer>
     <script src="./js/app.js"></script>
+    <script src="./js/actionsHtml.js"></script>
   </body>
 </html>

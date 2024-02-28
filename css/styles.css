@@ -13,13 +13,13 @@ main{
     flex-direction: row;
 }
 
+#home{
+    display: block;
+}
+
 section{
     flex-grow: 1;
     display: none; 
-}
-
-#home{
-    display: block;
 }
 
 header{
@@ -34,7 +34,7 @@ header{
 }
 
 h2{
-    margin-top: 18px;
+    margin-top: 15px;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
@@ -85,11 +85,12 @@ nav ul li{
     padding: 10px; 
     text-align: center;
     width: 220px;
-    background-color: #FFC4DA;
     border-radius: 15px;
 }
 
-
+nav ul #active-home{
+    background-color: #FFC4DA;
+}
 
 
 nav ul li a{
@@ -102,7 +103,6 @@ nav ul li a{
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    
 }
 
 /* -------------------- home --------------------*/
@@ -110,24 +110,17 @@ nav ul li a{
 /* added home-section class for the centered div --- Cecilia */
 
 .home-section{
-    margin: auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    height: 100%;
-    width: 90%;
+    flex-direction: column;
+    height: 87vh;
+    width: 100%;
 }
 
-/* added home-logo class for the centered image --- Cecilia */
-
-.home-section .home-logo {
-    display: flex;
-    margin: 0 auto;
-    height: 51%;
+.home-section img{
+    width: 324px;
     border-radius: 15px;
-    object-fit: contain;
 }
 
 /* -------------------- gestionate books --------------------*/
@@ -161,7 +154,7 @@ nav ul li a{
     height: 155px;
     background-color: #FFE6F0;
     width: 800px;
-    margin: 25px auto;
+    margin: 15px auto;
     border-radius: 15px;
 }
 
@@ -243,14 +236,61 @@ nav ul li a{
     cursor: pointer;
 }
 
+/* ######## Table ###### */
+
+.adding-books{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.adding-books table{
+    width: 800px;
+    text-align: center;
+}
+
+.adding-books table th{
+    color: #FF88B4;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+.adding-books table td{
+    color: #66565C;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+}
+
+.adding-books table td button{
+    width: 80px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #B8E780;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #485838;
+    cursor: pointer;
+    padding: 0;
+}
+
+
 /* added footer style ---Cecilia */
-/* there's a problem with it */
 
 footer{
-    display: flex;
     background-color: #FFC4DA;
     font-size: 20px;
-    padding: 10px 0px 10px 0px; /* delete padding to sides --- Cecilia*/
+    padding: 15px 0px 15px 0px; /* delete padding to sides --- Cecilia*/
     text-align: center; 
     font-family: "Itim", cursive;
     font-weight: 400;

@@ -1,32 +1,30 @@
-//Function to hide sections of page
-function hideSection(id){
-    //Devuelve una NodeList con todos los elementos section.
-    document.querySelectorAll('section').forEach(function(section){
-        section.style.display = 'none';
-    });
-    document.getElementById(id).style.display = 'block';
-    document.getElementById('add-action').style.display = 'none';
-    document.getElementById('add-action-button').style.display = 'flex';
-}
+const tableBooks = document.getElementById("table-books-body"); 
+const library = new Library();
 
-//function to show Add action Form
-function showAddActionForm(id){
-    document.getElementById(id).style.display = 'flex';
-    document.getElementById('add-action-button').style.display = 'none';
-}
+const btnSave = document.getElementById("btnSave");
+btnSave.addEventListener("click",()=>{
+    let title = document.getElementById("txtTitle").value;
+    let author = document.getElementById("txtAuthor").value;
+    let genre = document.getElementById("select-option-genre").value;
+    let status = document.getElementById("select-option-status").value;
+    let book = new Books(title, author, genre, status);
+    library.addBook(book);
+    addBookTable(book);
+    clearInputs();
+});
 
-//function clear inputs
-function clearInputs(){
-    //Selet all inputs and clear them with a forEach loop using querySelectorAll that returns a NodeList.
-    document.querySelectorAll('input').forEach(function(input){
-        input.value = '';
-    });
-    document.getElementById('select-option-genre').selectedIndex = 0;
-    document.getElementById('select-option-status').selectedIndex = 0;
-}
+function addBookTable(book){
+    tableBooks.innerHTML +=
+    `
+        <tr>
+            <td>${book.getId}</td>
+            <td>${book.getTitle}</td>
+            <td>${book.getAuthor}</td>
+            <td>${book.getGenre}</td>
+            <td>${book.getStatus}</td>
+            <td><button class="btn btn-danger" onclick="deleteBook(${book.getId})">Delete</button></td>
+            <td><button class="btn btn-warning" onclick="updateBook(${book.getId})">Update</button></td>
+        </tr>
+    `
 
-//function to show add button
-function showAddButton(id){
-    document.getElementById(id).style.display = 'none';
-    document.getElementById('add-action-button').style.display = 'flex';
 }
