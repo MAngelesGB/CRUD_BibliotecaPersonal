@@ -1,10 +1,6 @@
 class Library{
   constructor(){
     this.books = new Array();
-    this.read = this.books.filter(book => book.status === "read");
-    this.toRead = this.books.filter(book => book.status === "to read");
-    this.reading = this.books.filter(book => book.status === "reading");
-    this.abandoned = this.books.filter(book => book.status === "abandoned");
   }
 
   addBook(book){
@@ -16,10 +12,14 @@ class Library{
   }
 
   removeBook(id){
-
+    this.books = this.books.filter(book => book.id !== id);
   }
 
-  updateBook(id, book){
-
+  updateBook(id, title, author, genre, status){
+    let book = this.books.find(book => book.getId === id);
+    book.setTitle = title;
+    book.setAuthor = author;
+    book.setGenre = genre;
+    book.setStatus = status;
   }
 }

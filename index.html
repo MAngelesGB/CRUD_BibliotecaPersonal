@@ -27,7 +27,7 @@
             <a href="#home">Home</a>
           </li>
           <hr>
-          <li id = "active-books" onclick="hideSection('all-books'); colorActiveSection('active-books')">
+          <li id = "active-books" onclick="hideSection('all-books'); colorActiveSection('active-books'); allBooks()">
             <a href="#all-books">All books</a>
           </li>
           <hr>
@@ -50,7 +50,23 @@
       </section>
     
       <section id = "all-books">
-        <p>Aqui estan todos los libros</p>
+        <h2>All books</h2>
+        <div class="all-books">
+          <table id="tableSong">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="table-books-body-all">
+
+            </tbody>
+          </table>
+        </div>
       </section> 
     
       <section id = "gestionate-books">
@@ -62,6 +78,7 @@
 
         <div id="add-action" class = "info-book">
           <form>
+            <input type="text" id="txtId" style="display: none">
             <div class="structure-input">
               <label for="titleBook"> Title </label>
               <input type="text" name="title" id="txtTitle" placeholder="Title of the book">
@@ -94,6 +111,7 @@
             </div>
             
             <button type="button" id="btnSave">Save</button>
+            <button type="button" class="updateButton" id="btnUpdate" onclick="updateBook()">Save</button>
             <button type="button" id="btnCancel" onclick="clearInputs()">Cancel</button>
             <a class="form-visible" onclick="showAddButton('add-action')"><img src="./sources/crudElements/hideForm.png" alt="hide form"></a>
           </form>

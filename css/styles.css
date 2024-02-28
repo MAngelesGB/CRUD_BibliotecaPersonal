@@ -228,6 +228,10 @@ nav ul li a{
     cursor: pointer;
 }
 
+.info-book .updateButton{
+    display: none;
+}
+
 .info-book .form-visible img{
     width: 38px;
     height: 38px;
@@ -277,9 +281,10 @@ nav ul li a{
     background-color: #B8E780;
     font-family: "Kalam", cursive;
     font-weight: 400;
+    margin-left: 10px;
     font-style: normal;
     font-size: 16px;
-    color: #485838;
+    color: #313a27;
     cursor: pointer;
     padding: 0;
 }

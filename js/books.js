@@ -16,7 +16,7 @@ class Books{
     return this.title; 
   }
   set setTitle(title){
-    this.titgle = title; 
+    this.title = title; 
   }
 
   get getAuthor(){
